@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="112mm"
-   height="93mm"
-   viewBox="-1 -12 112 93"
+   width="251.05241mm"
+   height="111.30312mm"
+   viewBox="-1 -12 251.05241 111.30312"
    version="1.1"
    id="svg298"
    sodipodi:docname="symbolSVG.svg"
@@ -22,6 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,12 +40,16 @@
      id="namedview300"
      showgrid="false"
      inkscape:zoom="1.112388"
-     inkscape:cx="291.15927"
-     inkscape:cy="149.10748"
+     inkscape:cx="537.02669"
+     inkscape:cy="147.24464"
      inkscape:window-x="0"
      inkscape:window-y="20"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg298" />
+     inkscape:current-layer="svg298"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <style
      type="text/css"
      id="style176">
@@ -86,251 +91,223 @@ text {font-family:monospace;}
     </pattern>
   </defs>
   <g
-     id="outerGroup">
+     id="outerGroup"
+     transform="translate(65.052422,18.795993)">
     <g
        class="PinNames Draw"
        display="inherit"
-       id="g217">
+       id="g217"
+       style="display:inherit;fill:#646464;stroke:#646464">
       <text
          x="23"
          y="3.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text185"><![CDATA[RST]]></text>
+         id="text185"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[RST]]></text>
       <text
          x="23"
          y="13.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text187"><![CDATA[ADC]]></text>
+         id="text187"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[ADC]]></text>
       <text
          x="23"
          y="23.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text189"><![CDATA[EN]]></text>
+         id="text189"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[EN]]></text>
       <text
          x="23"
          y="33.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text191"><![CDATA[IO16]]></text>
+         id="text191"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[IO16]]></text>
       <text
          x="23"
          y="43.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text193"><![CDATA[IO14]]></text>
+         id="text193"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[IO14]]></text>
       <text
          x="23"
          y="53.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text195"><![CDATA[IO12]]></text>
+         id="text195"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[IO12]]></text>
       <text
          x="23"
          y="63.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text197"><![CDATA[IO13]]></text>
+         id="text197"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[IO13]]></text>
       <text
          x="23"
          y="73.5"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text199"><![CDATA[VCC]]></text>
+         id="text199"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[VCC]]></text>
       <text
          x="87"
          y="73.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text201"><![CDATA[GND]]></text>
+         id="text201"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[GND]]></text>
       <text
          x="87"
          y="63.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text203"><![CDATA[IO15]]></text>
+         id="text203"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[IO15]]></text>
       <text
          x="87"
          y="53.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text205"><![CDATA[IO2]]></text>
+         id="text205"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[IO2]]></text>
       <text
          x="87"
          y="43.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text207"><![CDATA[IO0]]></text>
+         id="text207"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[IO0]]></text>
       <text
          x="87"
          y="33.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text209"><![CDATA[IO4]]></text>
+         id="text209"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[IO4]]></text>
       <text
          x="87"
          y="23.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text211"><![CDATA[IO5]]></text>
+         id="text211"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[IO5]]></text>
       <text
          x="87"
          y="13.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text213"><![CDATA[RXD0]]></text>
+         id="text213"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[RXD0]]></text>
       <text
          x="87"
          y="3.5"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text215"><![CDATA[TXD0]]></text>
+         id="text215"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[TXD0]]></text>
     </g>
     <g
        class="PinNumbers Draw"
        display="inherit"
-       id="g251">
+       id="g251"
+       style="display:inherit;fill:#646464;stroke:#646464">
       <text
          x="14"
          y="-2"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text219"><![CDATA[1]]></text>
+         id="text219"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[1]]></text>
       <text
          x="14"
          y="8"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text221"><![CDATA[2]]></text>
+         id="text221"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[2]]></text>
       <text
          x="14"
          y="18"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text223"><![CDATA[3]]></text>
+         id="text223"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[3]]></text>
       <text
          x="14"
          y="28"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text225"><![CDATA[4]]></text>
+         id="text225"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[4]]></text>
       <text
          x="14"
          y="38"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text227"><![CDATA[5]]></text>
+         id="text227"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[5]]></text>
       <text
          x="14"
          y="48"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text229"><![CDATA[6]]></text>
+         id="text229"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[6]]></text>
       <text
          x="14"
          y="58"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text231"><![CDATA[7]]></text>
+         id="text231"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[7]]></text>
       <text
          x="14"
          y="68"
          font-size="10"
-         stroke="none"
-         text-anchor="end"
-         id="text233"><![CDATA[8]]></text>
+         id="text233"
+         style="font-size:10px;font-family:monospace;text-anchor:end;stroke:none"><![CDATA[8]]></text>
       <text
          x="96"
          y="68"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text235"><![CDATA[9]]></text>
+         id="text235"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[9]]></text>
       <text
          x="96"
          y="58"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text237"><![CDATA[10]]></text>
+         id="text237"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[10]]></text>
       <text
          x="96"
          y="48"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text239"><![CDATA[11]]></text>
+         id="text239"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[11]]></text>
       <text
          x="96"
          y="38"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text241"><![CDATA[12]]></text>
+         id="text241"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[12]]></text>
       <text
          x="96"
          y="28"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text243"><![CDATA[13]]></text>
+         id="text243"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[13]]></text>
       <text
          x="96"
          y="18"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text245"><![CDATA[14]]></text>
+         id="text245"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[14]]></text>
       <text
          x="96"
          y="8"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text247"><![CDATA[15]]></text>
+         id="text247"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[15]]></text>
       <text
          x="96"
          y="-2"
          font-size="10"
-         stroke="none"
-         text-anchor="start"
-         id="text249"><![CDATA[16]]></text>
+         id="text249"
+         style="font-size:10px;font-family:monospace;text-anchor:start;stroke:none"><![CDATA[16]]></text>
     </g>
     <g
        class="Pins Draw"
        display="inherit"
-       id="g285">
+       id="g285"
+       style="display:inherit;fill:#468ef8;stroke:#468ef8">
       <line
          x1="0"
          y1="0"
          x2="20"
          y2="0"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line253" />
       <line
@@ -338,7 +315,7 @@ text {font-family:monospace;}
          y1="10"
          x2="20"
          y2="10"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line255" />
       <line
@@ -346,7 +323,7 @@ text {font-family:monospace;}
          y1="20"
          x2="20"
          y2="20"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line257" />
       <line
@@ -354,7 +331,7 @@ text {font-family:monospace;}
          y1="30"
          x2="20"
          y2="30"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line259" />
       <line
@@ -362,7 +339,7 @@ text {font-family:monospace;}
          y1="40"
          x2="20"
          y2="40"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line261" />
       <line
@@ -370,7 +347,7 @@ text {font-family:monospace;}
          y1="50"
          x2="20"
          y2="50"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line263" />
       <line
@@ -378,7 +355,7 @@ text {font-family:monospace;}
          y1="60"
          x2="20"
          y2="60"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line265" />
       <line
@@ -386,7 +363,7 @@ text {font-family:monospace;}
          y1="70"
          x2="20"
          y2="70"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line267" />
       <line
@@ -394,7 +371,7 @@ text {font-family:monospace;}
          y1="70"
          x2="90"
          y2="70"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line269" />
       <line
@@ -402,7 +379,7 @@ text {font-family:monospace;}
          y1="60"
          x2="90"
          y2="60"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line271" />
       <line
@@ -410,7 +387,7 @@ text {font-family:monospace;}
          y1="50"
          x2="90"
          y2="50"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line273" />
       <line
@@ -418,7 +395,7 @@ text {font-family:monospace;}
          y1="40"
          x2="90"
          y2="40"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line275" />
       <line
@@ -426,7 +403,7 @@ text {font-family:monospace;}
          y1="30"
          x2="90"
          y2="30"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line277" />
       <line
@@ -434,7 +411,7 @@ text {font-family:monospace;}
          y1="20"
          x2="90"
          y2="20"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line279" />
       <line
@@ -442,7 +419,7 @@ text {font-family:monospace;}
          y1="10"
          x2="90"
          y2="10"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line281" />
       <line
@@ -450,20 +427,21 @@ text {font-family:monospace;}
          y1="0"
          x2="90"
          y2="0"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line283" />
     </g>
     <g
        class="Graphics Draw"
        display="inherit"
-       id="g295">
+       id="g295"
+       style="display:inherit;fill:#343434;stroke:#343434">
       <line
          x1="20"
          y1="-10"
          x2="90"
          y2="-10"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line287" />
       <line
@@ -471,7 +449,7 @@ text {font-family:monospace;}
          y1="80"
          x2="90"
          y2="-10"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line289" />
       <line
@@ -479,7 +457,7 @@ text {font-family:monospace;}
          y1="80"
          x2="20"
          y2="80"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line291" />
       <line
@@ -487,7 +465,7 @@ text {font-family:monospace;}
          y1="-10"
          x2="20"
          y2="80"
-         style="stroke-width:1"
+         style="stroke-width:1;stroke-linecap:round"
          sl=""
          id="line293" />
     </g>
@@ -495,35 +473,35 @@ text {font-family:monospace;}
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="10.654731"
-     y="-22.941175"
+     x="75.707153"
+     y="-4.1451826"
      id="text306"><tspan
        sodipodi:role="line"
        id="tspan304"
-       x="10.654731"
-       y="-22.941175"
+       x="75.707153"
+       y="-4.1451826"
        style="stroke-width:0.26458332">ESP-07s</tspan></text>
   <rect
      style="fill:#808080;stroke-width:0.26458332"
      id="rect310"
      width="44.95396"
      height="40.196934"
-     x="140.04604"
-     y="6.3145776" />
+     x="205.09845"
+     y="25.110571" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:7.05555534px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="142.66241"
-     y="21.299232"
+     x="207.71483"
+     y="40.095226"
      id="text314"><tspan
        sodipodi:role="line"
        id="tspan312"
-       x="142.66241"
-       y="21.299232"
+       x="207.71483"
+       y="40.095226"
        style="font-size:7.05555534px;stroke-width:0.26458332">H-bridge </tspan><tspan
        sodipodi:role="line"
-       x="142.66241"
-       y="30.118677"
+       x="207.71483"
+       y="48.914669"
        style="font-size:7.05555534px;stroke-width:0.26458332"
        id="tspan316"
        dy="0 0 0 0 0 0 0 0"
@@ -533,49 +511,49 @@ text {font-family:monospace;}
      id="rect310-3"
      width="44.95396"
      height="40.196934"
-     x="-66.052422"
-     y="39.732735" />
+     x="-1"
+     y="58.528728" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:7.05555534px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="-63.436043"
-     y="54.717388"
+     x="1.6163788"
+     y="73.513382"
      id="text314-6"><tspan
        sodipodi:role="line"
        id="tspan312-7"
-       x="-63.436043"
-       y="54.717388"
+       x="1.6163788"
+       y="73.513382"
        style="font-size:7.05555534px;stroke-width:0.26458332">H-bridge </tspan><tspan
        sodipodi:role="line"
-       x="-63.436043"
-       y="63.536831"
+       x="1.6163788"
+       y="82.332825"
        style="font-size:7.05555534px;stroke-width:0.26458332"
        id="tspan316-5"
        dy="0 0 0 0 0 0 0 0"
        dx="0 0 0 0 0 0 0 0">Turn motor</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 0,50 -25.736573,-0.158568 0.237852,0.475702"
+     d="m 65.052422,68.795993 -25.736573,-0.158568 0.237852,0.475702"
      id="path342"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 0,60.000001 -24.785166,-0.168799 v 0"
+     d="M 65.052422,78.795994 40.267256,78.627195 v 0"
      id="path344"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 110,19.999999 31.47314,0.347827"
+     d="m 175.05242,38.795992 31.47314,0.347827"
      id="path346"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 110,30 31.47314,0.09974"
+     d="m 175.05242,48.795993 31.47314,0.09974"
      id="path348"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 0,9.9999999 -20.265984,9.8823527"
+     d="M 65.052422,28.795993 44.786438,28.678346"
      id="path350"
      inkscape:connector-curvature="0" />
   <rect
@@ -583,27 +561,27 @@ text {font-family:monospace;}
      id="rect310-3-3"
      width="44.95396"
      height="40.196934"
-     x="-65.576729"
-     y="-9.9782629" />
+     x="-0.52430725"
+     y="8.8177299" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:7.05555534px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="-64.149605"
-     y="4.2928362"
+     x="0.90281677"
+     y="23.088829"
      id="text314-6-5"><tspan
        sodipodi:role="line"
-       x="-64.149605"
-       y="4.2928362"
+       x="0.90281677"
+       y="23.088829"
        style="font-size:7.05555534px;stroke-width:0.26458332"
        id="tspan316-5-2">some signal</tspan><tspan
        sodipodi:role="line"
-       x="-64.149605"
-       y="13.11228"
+       x="0.90281677"
+       y="31.908274"
        style="font-size:7.05555534px;stroke-width:0.26458332"
        id="tspan378">visible on </tspan><tspan
        sodipodi:role="line"
-       x="-64.149605"
-       y="21.931725"
+       x="0.90281677"
+       y="40.727718"
        style="font-size:7.05555534px;stroke-width:0.26458332"
        id="tspan380">phone</tspan></text>
 </svg>
