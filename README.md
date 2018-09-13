@@ -1,6 +1,6 @@
 # WIFIRealtimeRemoteControl
 
-It was made to replace electronic from RC car toy "LandBuster" and it was working great.
+It was made to replace (with 2 h-bridges) electronic from RC car toy "LandBuster" and it was working great.
 
 ESP in intended to control two h-bridges (main motor and some turning wheels motor) and to send ADC reading (it was connected to thermistor becouse main motor overheated).
 
