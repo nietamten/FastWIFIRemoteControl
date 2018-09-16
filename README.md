@@ -1,4 +1,4 @@
-# WIFIRealtimeRemoteControl
+# FastWIFIRemoteControl
 
 It was made to replace (with 2 h-bridges) electronic from RC car toy "LandBuster" and it was working great.
 
