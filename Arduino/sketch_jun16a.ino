@@ -1,85 +1,58 @@
 
 #include <ESP8266WiFi.h>          //ESP8266 Core WiFi Library (you most likely already have this in your sketch)
-
-//#include <DNSServer.h>            //Local DNS Server used for redirecting all requests to the configuration portal
-//#include <ESP8266WebServer.h>     //Local WebServer used to serve the configuration portal
-//#include <WiFiManager.h>          //https://github.com/tzapu/WiFiManager WiFi Configuration Magic
 #include "ESPAsyncUDP.h"
 
-//WiFiManager wifiManager;
 AsyncUDP udpSend;
 AsyncUDP udpRec;
-IPAddress    apIP(10, 10, 10, 1);                               // Private network address: local & gateway
 
-   bool rec = false;
+bool rec = false;
 
-volatile               byte v;
-volatile            byte a;
+volatile byte v; 
+volatile byte a;
 volatile bool change = false;
 volatile bool front = false;
 
 
-#define R1 12
-#define R2 13
-#define M1 5
-#define M2 4 
+#define SERVO 12
+#define MDIR 13
+#define MPWM 14 
 
 
 void ride()
 {
-      digitalWrite(M2, LOW);
-      digitalWrite(M1, LOW);
-
     if(a>64&&a<194)
-    {
-      if(v>250)
-        digitalWrite(M1, HIGH);
-       else
-        analogWrite(M1, (float)((float)v/(float)(255))*(float)PWMRANGE);              
-      front =false;
-    }
+      digitalWrite(MDIR, LOW);
     else
-    {
-      if(v>250)
-        digitalWrite(M2, HIGH);
-       else
-        analogWrite(M2, (float)((float)v/(float)(255))*(float)PWMRANGE); 
-        front = true;
-    }
+      digitalWrite(MDIR, HIGH);
+
+    if(v>250)
+      digitalWrite(MPWM, HIGH);
+    else
+      analogWrite(MPWM, (float)((float)v/(float)(255))*(float)PWMRANGE);  
 }
 
 void setup() {
 
-analogWriteFreq(500);
-
-  //if(!wifiManager.autoConnect()) {
-    //ESP.reset();
-    //delay(1000);
-  //} 
+  analogWriteFreq(50);
 
 
-//for(int i=0;i<4;i++)
-//{
-//pinMode(i,OUTPUT);
-//digitalWrite(i,LOW);
-//}
+  pinMode(SERVO,OUTPUT);
+  pinMode(MDIR,OUTPUT);
+  pinMode(MPWM,OUTPUT);
+  digitalWrite(SERVO, LOW);    
+  digitalWrite(MDIR, LOW);    
+  digitalWrite(MPWM, LOW); 
 
-digitalWrite(R1,LOW);
-pinMode(R1,OUTPUT);
-digitalWrite(R2,LOW);
-pinMode(R2,OUTPUT);
+  //Serial.begin(115200);
+  //Serial.println("start 1");
+  
+  IPAddress local_IP(192,168,4,22);
+  IPAddress gateway(192,168,4,9);
+  IPAddress subnet(255,255,255,0);
 
-digitalWrite(M1,LOW);
-pinMode(M1,OUTPUT);
-digitalWrite(M2,LOW);
-pinMode(M2,OUTPUT);
-
-delay(100);
-
-//digitalWrite(2,LOW);
-
-  WiFi.mode(WIFI_AP_STA);
-  WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));   // subnet FF FF FF 00
+  //WiFi.mode(WIFI_AP_STA);
+  WiFi.softAPConfig(local_IP, gateway, subnet);
+  //WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));   // subnet FF FF FF 00
   WiFi.softAP("autko");
 
 
@@ -88,76 +61,78 @@ delay(100);
      
       udpRec.onPacket([](AsyncUDPPacket packet) {
 
+      //Serial.println("rec ");
+
         rec = true;
 
-        if(packet.length() == 5 && packet.data()[0] == 'x' && packet.data()[3] == 'y')
+        if( packet.length() == 5 && 
+            packet.data()[0] == 'x' && 
+            packet.data()[3] == 'y')
         {
-
+          //Serial.println("rec test 1 ok");
+          
           byte xorv = 0;
           for(int i=0;i<4;i++)
             xorv ^= packet.data()[i]; 
           if(xorv == packet.data()[4])
           {
-//digitalWrite(2,HIGH);
-             v = packet.data()[1];
-             a = packet.data()[2];
-
+            //Serial.println("rec test 2 ok");
+            
+            //digitalWrite(2,HIGH);
+            v = packet.data()[1];
+            a = packet.data()[2];
+            
             ride();
 
             byte va;
-            {
-              if(a<64)
-              {
-                va = a;
-              }
-              else if(a<128)
-              {
-                va = 64-(a-64);
-              }
-              else if(a<192)
-              {
-                va = a-128;
-              }
-              else
-              {
-                va = 64-(a-192);
-              }
-            }
-            
-            if(a<128)
-            {
-              //right
-              digitalWrite(R1, LOW);
-              analogWrite(R2, (float)((float)va/(float)(64))*(float)PWMRANGE);
-            }
+            if(a <= 64)
+              va = 64-a;
+            else if (a <= 128)
+              va = a-64;
+            else if (a <= 192)
+              va = a-64;
             else
-            {
-              //left
-              digitalWrite(R2, LOW);
-              analogWrite(R1, (float)((float)va/(float)(64))*(float)PWMRANGE);
-            }
-            
+              va = 128-(a-192);
+
+            float prop = (float)va/(float)(128);
+            //unsigned int activeRange = (PWMRANGE/20);
+            //float servo = (float)activeRange+((float)activeRange*prop);
+
+            //wyznaczone eksperymentalnie dla MG996R
+            unsigned int activeRange = 231;
+            unsigned int servo = (float)36+231-((float)activeRange*prop);
+
+            analogWrite(SERVO, servo);
+            //Serial.println(servo);
+            //Serial.println(va);
           }
         }
         
       });
-
-
-      //digitalWrite(2,LOW);
-      //analogWrite(2, 500);    
+ 
     }else{
       ESP.reset(); 
     }
   }else{
     ESP.reset();
   }
+ 
 }
 
 int c = 0;
 
+
 void loop() {
-
-
+/*
+  Serial.begin(115200);
+  for(uint16 i=0;i<65535;i++)
+   {
+    analogWrite(SERVO, i);
+    Serial.println(i);
+    delay(300);
+   }
+    return;
+*/
     rec = false;
     delay(500);
     uint16 t = analogRead(A0);
@@ -167,16 +142,19 @@ void loop() {
     //msg[1] = ((uint8_t*)t)[0];
     //msg[2] = ((uint8_t*)t)[1]; 
     
-    udpSend.broadcast(msg,3) ;
+    //udpRec.broadcastTo(msg,3,9998) ;
+    udpSend.writeTo(msg,3,IPAddress(192,168,4, 255),9998) ;
+ 
+    //Serial.println("send");
     if(!rec)
     {
+      //Serial.println("!res");
       c++;
       if(c>1)
       {
-        digitalWrite(R1, LOW);    
-        digitalWrite(R2, LOW);;    
-        digitalWrite(M1, LOW);    
-        digitalWrite(M2, LOW);    
+        digitalWrite(SERVO, LOW);    
+        digitalWrite(MDIR, LOW);    
+        digitalWrite(MPWM, LOW);    
       }
       else
         c=0;
