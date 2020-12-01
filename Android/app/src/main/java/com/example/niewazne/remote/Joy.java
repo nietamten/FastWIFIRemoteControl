@@ -1,22 +1,19 @@
 package com.example.niewazne.remote;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewDebug;
-
-import java.nio.ByteBuffer;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.min;
 import static java.lang.Math.pow;
 import static java.lang.Math.sin;
 import static java.lang.Math.sqrt;
-import static java.lang.StrictMath.abs;
 
 
 class Joy extends View {
@@ -28,8 +25,11 @@ class Joy extends View {
 
     final private float rP = (float)0.78;
 
+    private int maxVelocity = 100; //254
+
     public Joy(Context context, AttributeSet attrs) {
         super(context, attrs);
+//        maxVelocity = Remote.settings.getMax();
 
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.FILL);
@@ -83,8 +83,8 @@ class Joy extends View {
 
             byte[] buf = new byte[5];
             buf[0] =  (byte)'x';
-            buf[1] = (byte)((int)((lineLen/r)*254)&0xff);
-            buf[2] = (byte)((int)(((Math.atan2(posX, posY)+Math.PI)/(2*Math.PI))*254)&0xff);
+            buf[1] = (byte)((int)((lineLen/r)*maxVelocity)&0xff);
+            buf[2] = (byte)((int)(((Math.atan2(posX, posY)+Math.PI)/(2*Math.PI))*maxVelocity)&0xff);
             buf[3] = (byte)'y';
             byte xor = 0;
             for(int i=0;i<4;i++)
