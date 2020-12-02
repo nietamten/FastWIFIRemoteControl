@@ -29,7 +29,12 @@ class Joy extends View {
 
     public Joy(Context context, AttributeSet attrs) {
         super(context, attrs);
-//        maxVelocity = Remote.settings.getMax();
+
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                context.getString(R.string.preference_file_key), context.MODE_PRIVATE);
+
+        int defaultValue = getResources().getInteger(R.integer.defV);
+        maxVelocity = sharedPref.getInt(context.getString(R.string.maxV), defaultValue);
 
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.FILL);
@@ -84,7 +89,17 @@ class Joy extends View {
             byte[] buf = new byte[5];
             buf[0] =  (byte)'x';
             buf[1] = (byte)((int)((lineLen/r)*maxVelocity)&0xff);
-            buf[2] = (byte)((int)(((Math.atan2(posX, posY)+Math.PI)/(2*Math.PI))*maxVelocity)&0xff);
+            buf[2] = (byte)((int)(((Math.atan2(posX, posY)+Math.PI)/(2*Math.PI))*254)&0xff);
+            {
+                if(buf[2]>54 && buf[2] <= 64)
+                    buf[2] = (byte) 54;
+                if(buf[2]>64 && buf[2] < 74)
+                    buf[2] = (byte) 74;
+                if(buf[2]>(byte)162 && buf[2] <= (byte)192)
+                    buf[2] = (byte) 162;
+                if(buf[2]>(byte)192 && buf[2] < (byte)222)
+                    buf[2] = (byte) 222;
+            }
             buf[3] = (byte)'y';
             byte xor = 0;
             for(int i=0;i<4;i++)

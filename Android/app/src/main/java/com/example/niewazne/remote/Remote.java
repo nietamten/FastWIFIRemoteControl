@@ -2,15 +2,17 @@ package com.example.niewazne.remote;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
 import android.view.View;
+import android.widget.SeekBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Remote extends AppCompatActivity implements SettingsObj.OnFragmentInteractionListener {
+public class Remote extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
 
     private static Receiver receiver;
     private static Remote remote;
@@ -19,19 +21,21 @@ public class Remote extends AppCompatActivity implements SettingsObj.OnFragmentI
 
     private static Sender sender;
 
-//    public static SettingsObj settings;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/*
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.sid, new SettingsObj())
-                .commit();
-*/
         setContentView(R.layout.activity_remote);
-//        settings = new SettingsObj();
+
+        SharedPreferences sharedPref = getSharedPreferences(
+                getString(R.string.preference_file_key), MODE_PRIVATE);
+
+        int defaultValue = getResources().getInteger(R.integer.defV);
+        int maxVelocity = sharedPref.getInt(getString(R.string.maxV), defaultValue);
+
+        SeekBar sb = (SeekBar)findViewById(R.id.seekBar);
+        sb.setProgress(maxVelocity);
+        sb.setOnSeekBarChangeListener(this);
+
         joy = findViewById(R.id.joy);
         remote = this;
     }
@@ -110,14 +114,21 @@ public class Remote extends AppCompatActivity implements SettingsObj.OnFragmentI
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
+    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+        SharedPreferences sharedPref = getSharedPreferences(
+                getString(R.string.preference_file_key), MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.maxV), i);
+        editor.apply();
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
 
     }
 
-
-    public void abc(View b) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
 }
